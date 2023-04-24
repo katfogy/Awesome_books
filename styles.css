@@ -107,12 +107,12 @@ section {
 }
 
 @media screen and (min-width: 735px) {
-
   .menu__items {
     display: flex;
     justify-content: flex-end;
     gap: 40px;
   }
+
   .nav-menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -129,5 +129,4 @@ section {
   .add-book {
     max-width: 400px;
   }
-  
 }
