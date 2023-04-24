@@ -6,9 +6,15 @@ const allBooks = document.getElementById('view-all-books');
 const books = JSON.parse(localStorage.getItem('storebooks')) || [];
 
 function displayBooks() {
-  const books = JSON.parse(localStorage.getItem('storebooks')) || [];
-  allBooks.innerHTML = books.map((book) => ` <p class="container__body-title">${book.title} by ${book.author}</p>
-        <button class="container__body-btn" id="${book.id}">Remove</button>`).join('');
+  if (books.length < 1) {
+    msg.innerHTML = 'Shelf is Empty';
+    allBooks.style.display = 'none';
+  } else {
+    allBooks.style.display = 'block';
+    const books = JSON.parse(localStorage.getItem('storebooks')) || [];
+    allBooks.innerHTML = books.map((book) => ` <div class="parent-content"><p class="container__body-title">${book.title} by ${book.author}</p>
+    <button class="container__body-btn" id="${book.id}">Remove</button></div>`).join('');
+  }
 }
 
 function addBooks(title, author) {
@@ -26,7 +32,8 @@ function addBooks(title, author) {
     msg.innerHTML = 'Book Added Successfully';
     localStorage.setItem('storebooks', JSON.stringify(books));
   }
-
+  title.value = '';
+  author.value = '';
   displayBooks();
 }
 
