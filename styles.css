@@ -1,3 +1,8 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
