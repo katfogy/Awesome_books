@@ -6,7 +6,7 @@ const allBooks = document.getElementById('view-all-books');
 const books = JSON.parse(localStorage.getItem('storebooks')) || [];
 
 function displayBooks() {
-  if (books.length < 1) {
+  if (books.length < 1) {Object.assign()
     msg.innerHTML = 'Shelf is Empty';
     allBooks.style.display = 'none';
   } else {
