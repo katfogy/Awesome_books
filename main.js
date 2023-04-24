@@ -50,8 +50,10 @@ function deleteBook(id) {
 }
 
 allBooks.addEventListener('click', (e) => {
-  const id = parseFloat(e.target.id);
-  deleteBook(id);
+  if (e.target.classList.contains('container__body-btn')) {
+    const id = parseFloat(e.target.id);
+    deleteBook(id);
+  }
 });
 
 displayBooks();
