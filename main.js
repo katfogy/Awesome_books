@@ -12,13 +12,13 @@ class AwesomeBooks {
   }
 
   displayBooks() {
+    const books = JSON.parse(localStorage.getItem('storebooks')) || [];
     if (books.length < 1) {
       msg.innerHTML = 'Shelf is Empty';
       allBooks.style.display = 'none';
     } else {
       this.id = 0;
       allBooks.style.display = 'block';
-      const books = JSON.parse(localStorage.getItem('storebooks')) || [];
       allBooks.innerHTML = books.map((book) => ` <div class="parent-content"><p class="container__body-title">${book.title} by ${book.author}</p>
       <button class="container__body-btn" id="${book.id}">Remove</button></div>`).join('');
     }
@@ -30,6 +30,7 @@ class AwesomeBooks {
     } else if (this.bookAuthor.value === '') {
       msg.innerHTML = 'Book Author cannot Be Blank';
     } else {
+      const books = JSON.parse(localStorage.getItem('storebooks')) || [];
       const id = books.length + 1;
       books.push({
         id,
