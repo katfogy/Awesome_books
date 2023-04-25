@@ -30,7 +30,7 @@ class AwesomeBooks {
       msg.innerHTML = 'Book Author cannot Be Blank';
     } else {
       const books = JSON.parse(localStorage.getItem('storebooks')) || [];
-      const id = books.length + 1;
+      const id = Math.floor(Math.random() * 10000000);
       books.push({
         id,
         title: this.bookTitle.value,
