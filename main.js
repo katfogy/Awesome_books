@@ -3,7 +3,6 @@ const bookTitle = document.getElementById('title');
 const addBtn = document.getElementById('add-book');
 const msg = document.getElementById('message');
 const allBooks = document.getElementById('view-all-books');
-const books = JSON.parse(localStorage.getItem('storebooks')) || [];
 
 class AwesomeBooks {
   constructor(bookTitle, bookAuthor) {
