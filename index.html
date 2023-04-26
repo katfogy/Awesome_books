@@ -15,16 +15,23 @@
             <div class="container nav-menu">
                 <div class="logo">Awesome Books</div>  
                 <ul class="menu__items">
-                    <li class="menu__items-item">List</li>
-                    <li class="menu__items-item">Add New</li>
-                    <li class="menu__items-item">Contact</li>
+                    <li class="menu__items-item" id="list-menu">List</li>
+                    <li class="menu__items-item" id="add-menu">Add New</li>
+                    <li class="menu__items-item" id="contact-menu">Contact</li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <section>
+        <div class="time">
+            <div class="container">
+               
+            </div>
+        </div>
+        <section id="books-all">
+           
             <div class="container" id="all-books">
+                <p id="message"></p>
                 <h1 class="container__title">All Awesome Books</h1>
                 <div class="container__body" id="view-all-books">
                 </div>
@@ -33,7 +40,6 @@
 
         <section id="add-books">
             <div class="container add-book">
-                <p id="message"></p>
                 <div class="form-control">
                     <input type="text" class="form-control_input" id="title" placeholder="Book Title">
                 </div>
@@ -45,8 +51,26 @@
                 </div>
             </div>
         </section>
-    </main>
 
+        <section id="contact">
+            <div class="container p-2 contact-container">
+                <h2 class="contact-title">Contact Information</h2>
+                <p class="contact-body">Do you have any Questions or you just want to say "Hello?"</p>
+                <ul class="contact-handles">
+                    <li class="handles">Our Email: katfogy@gmail.com, paulasca8462@gmail.com</li>
+                    <li class="handles">Our Phone Number: +2348167161190, +251984796312</li>
+                    <li class="handles">Our Address: Abuja, Nigeria</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+<footer>
+   <div class="container f-c">
+    <div class="container p-2">
+        <h3>copy @ katfogy Inc.</h3>
+    </div>
+   </div>
+</footer>
     <script src="main.js"></script>
 </body>
 

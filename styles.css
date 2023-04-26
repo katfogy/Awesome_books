@@ -43,6 +43,7 @@ nav {
   list-style-type: none;
   border-right: 2px solid black;
   padding-right: 10px;
+  cursor: pointer;
 }
 
 .container__title {
@@ -104,6 +105,30 @@ section {
 
 #message {
   margin-bottom: 10px;
+}
+
+.p-2 {
+  padding: 10px;
+}
+
+.contact-container > * {
+  line-height: 2;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+footer {
+  padding: 10px;
+}
+
+.f-c {
+  border: 2px solid black;
 }
 
 @media screen and (min-width: 735px) {

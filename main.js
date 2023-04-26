@@ -3,6 +3,12 @@ const bookTitle = document.getElementById('title');
 const addBtn = document.getElementById('add-book');
 const msg = document.getElementById('message');
 const allBooks = document.getElementById('view-all-books');
+const contactSession = document.getElementById('contact');
+const bookSession = document.getElementById('books-all');
+const addBookSession = document.getElementById('add-books');
+const listMenu = document.getElementById('list-menu');
+const contactMenu = document.getElementById('contact-menu');
+const addMenu = document.getElementById('add-menu');
 
 class AwesomeBooks {
   constructor(bookTitle, bookAuthor) {
@@ -68,3 +74,27 @@ allBooks.addEventListener('click', (e) => {
 
 const newBook = new AwesomeBooks(bookTitle, bookAuthor);
 newBook.displayBooks();
+
+contactMenu.addEventListener('click', () => {
+  contactSession.style.display = 'block';
+  bookSession.style.display = 'none';
+  addBookSession.style.display = 'none';
+});
+
+listMenu.addEventListener('click', () => {
+  contactSession.style.display = 'none';
+  bookSession.style.display = 'block';
+  addBookSession.style.display = 'none';
+});
+
+addMenu.addEventListener('click', () => {
+  contactSession.style.display = 'none';
+  bookSession.style.display = 'none';
+  addBookSession.style.display = 'block';
+});
+
+window.addEventListener('load', () => {
+  contactSession.style.display = 'none';
+  bookSession.style.display = 'none';
+  addBookSession.style.display = 'none';
+});
