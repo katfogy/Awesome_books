@@ -9,10 +9,16 @@ import showContact from './modules/showContact.js';
 import displayBooks from './modules/viewAllBooks.js';
 import addBook from './modules/addBook.js';
 import AwesomeBooks from './modules/manageBook.js';
+import { DateTime } from "./modules/luxon.js";
 
 showContact()
 displayBooks();
 addBook();
+
+setInterval(() => {
+  const currentDate = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+  document.getElementById('date').innerHTML = currentDate;
+}, 1000);
 
 addBtn.addEventListener('click', () => {
   const newBook = new AwesomeBooks(bookTitle, bookAuthor);

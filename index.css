@@ -38,7 +38,10 @@ nav {
   justify-content: space-between;
   gap: 40px;
 }
-
+#date{
+  text-align: right;
+  font-weight: 900;
+}
 .menu__items-item {
   list-style-type: none;
   border-right: 2px solid black;
