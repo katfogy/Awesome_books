@@ -42,6 +42,7 @@ nav {
 #date {
   text-align: right;
   font-weight: 900;
+  padding-inline: 10px;
 }
 
 .menu__items-item {
