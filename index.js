@@ -1,3 +1,9 @@
+import showContact from './modules/showContact.js';
+import displayBooks from './modules/viewAllBooks.js';
+import addBook from './modules/addBook.js';
+import AwesomeBooks from './modules/manageBook.js';
+import { DateTime } from './modules/luxon.js';
+
 const bookAuthor = document.getElementById('author');
 const bookTitle = document.getElementById('title');
 const addBtn = document.getElementById('add-book');
@@ -5,13 +11,8 @@ const allBooks = document.getElementById('view-all-books');
 const contactSession = document.getElementById('contact');
 const bookSession = document.getElementById('books-all');
 const addBookSession = document.getElementById('add-books');
-import showContact from './modules/showContact.js';
-import displayBooks from './modules/viewAllBooks.js';
-import addBook from './modules/addBook.js';
-import AwesomeBooks from './modules/manageBook.js';
-import { DateTime } from "./modules/luxon.js";
 
-showContact()
+showContact();
 displayBooks();
 addBook();
 
@@ -35,9 +36,6 @@ allBooks.addEventListener('click', (e) => {
 
 const newBook = new AwesomeBooks(bookTitle, bookAuthor);
 newBook.displayBooks();
-
-
-
 
 window.addEventListener('load', () => {
   contactSession.style.display = 'none';
