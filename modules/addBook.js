@@ -1,4 +1,4 @@
-export default AddBook=()=> {
+const addBook = () => {
   const contactSession = document.getElementById('contact');
   const bookSession = document.getElementById('books-all');
   const addBookSession = document.getElementById('add-books');
@@ -9,4 +9,6 @@ export default AddBook=()=> {
     bookSession.style.display = 'none';
     addBookSession.style.display = 'block';
   });
-}
+};
+
+export default addBook;
