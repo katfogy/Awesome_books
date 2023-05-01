@@ -1,4 +1,4 @@
-export default function displayBooks() {
+export const displayBooks=()=> {
   const contactSession = document.getElementById('contact');
   const bookSession = document.getElementById('books-all');
   const addBookSession = document.getElementById('add-books');
